@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: master-deployment
+  namespace: default
+  labels:
+    app.kubernetes.io/name: master-svc
+    app.kubernetes.io/instance: test-project
+    app.kubernetes.io/version: 0.1.0
+    app.kubernetes.io/component: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-project
+      tier: frontend
+  template:
+    metadata:
+      name: master
+      labels:
+        app: test-project
+        tier: frontend
+    spec:
+      containers:
+      - name: master
+        image: master:latest
+        # TODO: Remove this if image is pushed on registry
+        imagePullPolicy: Never
+        envFrom:
+        - configMapRef:
+            name: core-config
+        env:
+        - name: HOSTNAME
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        securityContext:
+          privileged: false
+          procMount: Default

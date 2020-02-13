@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: core-config
+  namespace: default
+data:
+  # TODO: Use secret for Cookie
+  RELEASE_COOKIE: eXB6dGZmQlhwOUtaTk94bU83MXRwMFpIYnlhRlozQkNQTm5EUFkxNQ==
+  SERVICE_NAME: test-project-private.default.svc.cluster.local

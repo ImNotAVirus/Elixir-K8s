@@ -1,0 +1,5 @@
+resources:
+- configmap.yaml
+- master.yaml
+- slave.yaml
+- private-svc.yaml

@@ -1,0 +1,4 @@
+%{
+  "deferred_config": {:hex, :deferred_config, "0.1.1", "ec912e9ee3c99b90a8d4bdec8fbd15309f4bd6729f30789e0ff6f595d06bbce5", [:mix], [], "hexpm"},
+  "peerage": {:hex, :peerage, "1.0.3", "945c3dfc407215b89682c65198d004028df0fa772bfea4d2cc9bb4e39e8be9a0", [:mix], [{:deferred_config, "~> 0.1.1", [hex: :deferred_config, repo: "hexpm", optional: false]}], "hexpm"},
+}

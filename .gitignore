@@ -1,0 +1,26 @@
+*
+!/**/
+
+# Github files
+!/.gitignore
+!/.dockerignore
+!/.travis.yml
+!/.editorconfig
+!/CODE_OF_CONDUCT.md
+!/LICENSE
+!/README.md
+
+# Code
+!/mix.exs
+!/mix.lock
+!/.formatter.exs
+!/config/**/*.exs
+!/apps/**/*.ex
+!/apps/**/*.exs
+
+# Additionals files
+!/.deliver/*.example
+!/.deploy/*.example
+!/.k8s/**/Dockerfile
+!/.k8s/**/*.yaml
+!/.rel/*.eex

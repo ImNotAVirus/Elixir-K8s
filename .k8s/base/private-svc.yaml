@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-project-private
+  namespace: default
+spec:
+  clusterIP: None
+  ports:
+  - name: epmd
+    port: 4369
+  selector:
+    app: test-project
